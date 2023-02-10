@@ -7,7 +7,7 @@ import { DatabaseModule } from './../connection/database.module';
   imports: [
     DatabaseModule,
     JwtModule.register({
-      secret: `${process.env.SECRET_KEY}`,
+      secret: `${process.env.JWT_SECRET}`,
     }),
   ],
   controllers: [],

@@ -1,3 +1,4 @@
+import { usuarios } from 'src/entitys/usuarios.entity';
 import { DataSource } from 'typeorm';
 
 export const databaseProviders = [
@@ -11,7 +12,7 @@ export const databaseProviders = [
         username: process.env.APP_USER,
         password: process.env.APP_PASSWORD,
         database: process.env.APP_DATABASE,
-        entities: [],
+        entities: [usuarios],
         synchronize: JSON.parse(process.env.SINCRONIZE),
       });
 
